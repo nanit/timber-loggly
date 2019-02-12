@@ -1,12 +1,12 @@
 apply plugin: 'com.android.library'
 
 android {
-    compileSdkVersion 23
-    buildToolsVersion "23.0.2"
+    compileSdkVersion 28
+    buildToolsVersion '28.0.3'
 
     defaultConfig {
         minSdkVersion 15
-        targetSdkVersion 23
+        targetSdkVersion 28
         versionCode 1
         versionName "1.0"
     }
@@ -24,8 +24,8 @@ dependencies {
     testCompile 'com.fasterxml.jackson.core:jackson-databind:2.6.3'
     testCompile 'com.fasterxml.jackson.core:jackson-annotations:2.6.3'
 
-    compile 'com.jakewharton.timber:timber:4.1.2'
-    compile ('com.github.loggly:loggly-client:master-SNAPSHOT') {
+    implementation 'com.jakewharton.timber:timber:4.7.1'
+    implementation ('com.github.loggly:loggly-client:master-SNAPSHOT') {
         exclude group:'com.jakewharton.timber', module:'timber'
     }
 }
